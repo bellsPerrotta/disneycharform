@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" href="main.css">
+<title>Favorite Disney Character</title>
+<style type="text/css">
+.nameform {
+}
+</style>
+</head>
+	<div>
+		
+		<ul class="topnav">
+  <li><a class="active" href="main.html">Home</a></li>
+  <li><a href="#survey">Survey</a></li>
+  <li><a href="https://www.disney.com">Disney</a></li>
+</ul>
+</div>
+<body>
+<div id="hp1"><h1>Favorite Disney Character Survey</h1>
+
+	<p>Please enter your first and last name. Afterwards select your favorite main Disney character from the list below. <br> Don't forget to hit the "Submit" button afterwards!</p></div>
+	
+<div id="survey"><form action="/action_page.php" class="nameform">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Mickey/Minnie"><br><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Mouse"><br><br>
+  </form> 
+		
+  <form action="/action_page.php" class="radio">
+  <p>Please select your favorite Disney character!</p>
+  <input type="radio" id="mickey" name="fav_character" value="Mickey">
+  <label for="mickey">Mickey</label><br>
+  <input type="radio" id="minnie" name="fav_character" value="Minnie">
+  <label for="minnie">Minnie</label><br>
+  <input type="radio" id="goofy" name="fav_character" value="Goofy">
+  <label for="goofy">Goofy</label><br>
+	<input type="radio" id="donald" name="fav_character" value="Donald">
+  <label for="donald"> Donald</label><br>
+			<input type="radio" id="daisy" name="fav_character" value="Daisy">
+  <label for="daisy"> Daisy</label><br>
+			<input type="radio" id="pluto" name="fav_character" value="Pluto">
+  <label for="pluto"> Pluto</label><br><br>
+			<input type="submit" class="submit" value="Submit">
+</form>
+</div>
+
+	<div class="bottomstuff"><p>Thank you for submiting this survey!</p>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke(5px);
+</script> 
+<br>
+	<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+// Create linear gradient
+const grad=ctx.createLinearGradient(0,0,280,0);
+grad.addColorStop(0, "lightblue");
+grad.addColorStop(1, "darkblue");
+
+// Fill text with gradient
+ctx.font = "50px Arial";
+ctx.fillStyle = grad;
+ctx.fillText("Thanks!",10,80);
+</script>
+	
+	
+	<audio controls><br>
+		<source src="Disney_magical_twink.mp3" type="audio/mpeg"> </audio></div>
+	
+</body>
+</html>
