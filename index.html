@@ -20,15 +20,15 @@
 <body>
 <div id="hp1"><h1>Favorite Disney Character Survey</h1>
 
-	<p>Please enter your first and last name. Afterwards select your favorite main Disney character from the list below. <br> Don't forget to hit the "Submit" button afterwards!</p></div>
-	
-<div id="survey"><form action="/action_page.php" class="nameform">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="Mickey/Minnie"><br><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Mouse"><br><br>
-  </form> 
-		
+	<p>Please enter your first and last name. Afterwards select your favorite main Disney character from the list below. <br> Don't forget to hit the "Submit" button afterwards!</p><br><br><br><br></div>
+<div class="flextopstuff">	
+<div><form action="/action_page.php" class="nameform">
+  <label for="fname">First name:</label><br><br><br>
+  <input type="text" id="fname" name="fname" value="Mickey/Minnie"><br><br><br>
+  <label for="lname">Last name:</label><br><br><br>
+  <input type="text" id="lname" name="lname" value="Mouse"><br><br><br>
+  </form> </div><br><br><br><br>
+		<div>
   <form action="/action_page.php" class="radio">
   <p>Please select your favorite Disney character!</p>
   <input type="radio" id="mickey" name="fav_character" value="Mickey">
@@ -44,13 +44,36 @@
 			<input type="radio" id="pluto" name="fav_character" value="Pluto">
   <label for="pluto"> Pluto</label><br><br>
 			<input type="submit" class="submit" value="Submit">
-</form>
-</div>
+</form><br><br><br><br>
+</div> </div>
 
-	<div class="bottomstuff"><p>Thank you for submiting this survey!</p>
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+	
+	<div class="flexbottomstuff">
+		
+		<div><button class="locatebutton" onclick="getLocation()">Let us know where you're from!</button></div><br><br><br><br>
+
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+		
+		<div><p>Thank you for submiting this survey!</p></div><br><br><br><br>
+<div><canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
 Sorry, your browser does not support canvas.
-</canvas>
+</canvas></div>
 
 
 <script>
@@ -78,8 +101,8 @@ ctx.fillText("Thanks!",10,80);
 </script>
 	
 	
-	<audio controls><br>
-		<source src="Disney_magical_twink.mp3" type="audio/mpeg"> </audio></div>
+	<div><audio controls>
+		<source src="Disney_magical_twink.mp3" type="audio/mpeg"> </audio> </div> <br><br><br><br></div>
 	
 </body>
 </html>
